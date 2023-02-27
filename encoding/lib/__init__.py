@@ -1,3 +1,4 @@
+"""
 import os
 import torch
 from torch.utils.cpp_extension import load
@@ -41,4 +42,3 @@ cpu = _import("enclib_cpu", cpu_path, True)
 
 if torch.cuda.is_available():
     gpu = _import("enclib_gpu", gpu_path, True)
-"""
