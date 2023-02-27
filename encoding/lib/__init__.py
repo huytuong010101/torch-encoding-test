@@ -14,6 +14,7 @@ cpu = load('enclib_cpu', [
         os.path.join(cpu_path, 'nms_cpu.cpp'),
         os.path.join(cpu_path, 'rectify_cpu.cpp'),
     ], build_directory=cpu_path, verbose=True, is_standalone=True)
+print(">> Path to cpu", cpu)
 
 if torch.cuda.is_available():
     gpu = load('enclib_gpu', [
@@ -27,3 +28,4 @@ if torch.cuda.is_available():
             os.path.join(gpu_path, 'lib_ssd.cu'),
         ], extra_cuda_cflags=["--expt-extended-lambda"],
         build_directory=gpu_path, verbose=True, is_standalone=True)
+    print("Path to GPU", gpu)
