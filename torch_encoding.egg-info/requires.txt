@@ -1,0 +1,7 @@
+numpy
+tqdm
+nose
+portalocker
+Pillow
+scipy
+requests

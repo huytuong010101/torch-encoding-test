@@ -60,10 +60,7 @@ if __name__ == '__main__':
         packages=find_packages(exclude=["tests", "experiments"]),
         package_data={ 'encoding': [
             'LICENSE',
-            'lib/cpu/*.h',
-            'lib/cpu/*.cpp',
-            'lib/gpu/*.h',
-            'lib/gpu/*.cpp',
-            'lib/gpu/*.cu',
+            'lib/cpu/*',
+            'lib/gpu/*'
         ]},
     )
